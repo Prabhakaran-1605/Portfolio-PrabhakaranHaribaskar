@@ -1,0 +1,39 @@
+.navbar {
+  position: fixed;
+  top: 0; /* Stick to the top */
+  right: 0;
+  width: 100%; /* Ensure it spans the full width */
+  background-color: rgb(87, 149, 150); /* Light background to prevent overlap */
+  z-index: 1000;
+  padding: 10px 20px; /* Add some padding */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional shadow */
+}
+
+.navbar ul {
+  display: flex;
+  gap: 30px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  justify-content: flex-end; /* Align items to the right */
+}
+
+.navbar li {
+  color: var(--text-color);
+  font-size: 18px;
+}
+
+.navbar li a {
+  color: var(--text-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navbar li a:hover {
+  color: #f39c12; /* Hover color (orange) */
+}
+
+/* Prevent content from going under the navbar */
+body {
+  padding-top: 60px; /* Adjust based on navbar height */
+}

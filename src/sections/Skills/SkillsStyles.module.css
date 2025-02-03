@@ -1,0 +1,78 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding-top: 60px;
+
+  span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  img {
+    width: 20px;
+  }
+}
+
+.skillList {
+  display: flex;
+  justify-content: space-evenly;
+  align-self: center;
+  flex-wrap: wrap;
+  row-gap: 40px;
+  max-width: 26ch;
+}
+
+hr {
+  width: 100px;
+  height: 1px;
+  border: none;
+  background-color: var(--text-color);
+  margin: 30px auto;
+}
+
+@media (width >= 800px) {
+  .skillList {
+    max-width: fit-content;
+    gap: 30px;
+
+    p {
+      font-size: 20px;
+    }
+  }
+
+  hr {
+    width: 300px;
+  }
+}
+
+@keyframes glowingBorder {
+  0% {
+    box-shadow: 0 0 2px #ff7e5f, 0 0 10px #feb47b;
+  }
+  25% {
+    box-shadow: 0 0 2px #feb47b, 0 0 10px #86a8e7;
+  }
+  50% {
+    box-shadow: 0 0 2px #86a8e7, 0 0 10px #7f00ff;
+  }
+  75% {
+    box-shadow: 0 0 2px #7f00ff, 0 0 10px #ff7e5f;
+  }
+  100% {
+    box-shadow: 0 0 2px #ff7e5f, 0 0 10px #feb47b;
+  }
+}
+
+.animatedBorder {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 36px;
+  font-weight: bold;
+  color: var(--text-color);
+  text-transform: uppercase;
+  border: 5px solid transparent;
+  border-radius: 20px; /* Makes the corners rounded */
+  animation: glowingBorder 2s infinite alternate;
+}
