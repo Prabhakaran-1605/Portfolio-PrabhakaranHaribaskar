@@ -13,7 +13,7 @@ function Projects() {
       <div className={styles.projectsContainer}>
         <ProjectCard
           src={colorPicker}
-          link="https://color-picker-3kf5k4ukb-prabhakaran1605s-projects.vercel.app/"
+          link="https://color-picker-iota-indol.vercel.app/"
           h3="Color"
           p="Color Picker"
         />
